@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Rest API - Bagas</title>
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <!--- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"> --->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="css/ruang-admin.min.css" rel="stylesheet">
+</head>
+<body id="page-top">
+  <div id="wrapper">
+<!-- Sidebar -->
+<ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="https://bagas-api.herokuapp.com/docs">
+<div class="sidebar-brand-icon">
+<img src="https://telegra.ph/file/1a0ce5481bd1ea067acb5.jpg">
+</div>
+<div class="sidebar-brand-text mx-3">Bagas - API</div>
+  </a>
+  <hr class="sidebar-divider my-0">
+  <li class="nav-item active">
+<a class="nav-link" href="https://bagas-api.herokuapp.com/docs">
+  <i class="fas fa-fw fa-code"></i>
+  <span>Beranda</span></a>
+  </li>
+  <hr class="sidebar-divider">
+  <div class="sidebar-heading">
+API Features
+  </div>
+  <li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
+  aria-expanded="true" aria-controls="collapseBootstrap">
+  <i class="fas fa-download faa-bounce animated"></i>
+  <span>Social Media API</span>
+</a>
+<div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+  <div class="bg-primary py-2 collapse-inner rounded">
+<h6 class="collapse-header">Media Features</h6>
+<a class="collapse-item" href="/api/download/fb?url=https://www.facebook.com/alanwalkermusic/videos/277641643524720&apikey=YogGanz" target="_blank">Facebook Download &nbsp;<i class="fa fa-exclamation-triangle text-danger"></i><span class="text-danger mr-2"><b>Build</b></span></a>
+<a class="collapse-item" href="/api/download/tiktok?url=https://vt.tiktok.com/ZSJhvu1AE/&apikey=YogGanz" target="_blank">Tiktok Download</a>
+<a class="collapse-item" href="/api/download/ig?url=https://www.instagram.com/p/CNtpwxuH5NK/?igshid=g26k5coikzwr&apikey=YogGanz" target="_blank">Instagram Download &nbsp;<i class="fa fa-exclamation-triangle text-danger"></i><span class="text-danger mr-2"><b>Build</b></span></a>
+<a class="collapse-item" href="/api/download/ytmp3?url=https://youtu.be/Nq5rzeJ5Ab4&apikey=YogGanz" target="_blank">Youtube Mp3 Download</a>
+<a class="collapse-item" href="/api/download/ytmp4?url=https://youtu.be/Nq5rzeJ5Ab4&apikey=YogGanz" target="_blank">Youtube Mp4 Download</a>
+<a class="collapse-item" href="/api/yt/playmp3?query=Monolog-pamungkas&apikey=YogGanz" target="_blank">Youtube Play Mp3</a>
+<a class="collapse-item" href="/api/yt/playmp4?query=Monolog-pamungkas&apikey=YogGanz" target="_blank">Youtube Play Mp4</a>
+<a class="collapse-item" href="/api/yt/search?query=Monolog-pamungkas&apikey=YogGanz" target="_blank">Youtube Searching</a>
+<h6 class="collapse-header">Stalker Features</h6>
+<a class="collapse-item" href="/api/stalk/ig?apikey=YogGanz&username=Yxgs_" target="_blank">Instagram Stalker</a>
+<a class="collapse-item" href="/api/stalk/tiktok?apikey=YogGanz&username=chikakiku" target="_blank">Tiktok Stalker</a>
+<a class="collapse-item" href="/api/stalk/npm?apikey=YogGanz&query=zhirrr-api&hostname=zhirrr" target="_blank">Info NPM</a>
+</div>
+</div>
+  </li>
+  
+  <li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMusic" aria-expanded="true"
+  aria-controls="collapseMusic">
+  <i class="fas fa-music faa-bounce animated"></i>
+  <span>Musik Api</span>
+</a>
+<div id="collapseMusic" class="collapse" aria-labelledby="headingMusic" data-parent="#accordionSidebar">
+  <div class="bg-primary py-2 collapse-inner rounded">
+<h6 class="collapse-header">Music  API</h6>
+<a class="collapse-item" href="/api/music/joox?apikey=YogGanz&query=monolog pamungkas" target="_blank">Joox Download</a>
+<a class="collapse-item" href="/api/music/spotify?apikey=YogGanz&query=ignite" target="_blank">Spotify Search &nbsp;<i class="fa fa-exclamation-triangle text-danger"></i><span class="text-danger mr-2"><b>Build</b></span></a>
+  <a class="collapse-item" href="/api/music/liriklagu?query=sayang&apikey=YogGanz" target="_blank">Search Lirik Lagu</a>
+<a class="collapse-item" href="/api/music/chordlagu?lagu=sayang&apikey=YogGanz" target="_blank">Search Chord Lagu</a>
+</div>
+</div>
+  </li>
+  <li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseIslamic" aria-expanded="true"
+  aria-controls="collapseIslamic">
+  <i class="fas fa-star-and-crescent faa-bounce animated"></i>
+  <span>Islami</span>
+</a>
+<div id="collapseIslamic" class="collapse" aria-labelledby="headingIslamic" data-parent="#accordionSidebar">
+  <div class="bg-primary py-2 collapse-inner rounded">
+<h6 class="collapse-header">Islami Fitur</h6>
+<a class="collapse-item" href="/api/muslim/hadits?kitab=bukhari&nomor=52&apikey=YogGanz" target="_blank">Hadits Shahih</a>
+<a class="collapse-item" href="/api/muslim/quran?surah=1&ayat=2&apikey=YogGanz" target="_blank">Al Qur'an</a>
+<a class="collapse-item" href="/api/muslim/tahlil?apikey=YogGanz" target="_blank">Doa Tahlil</a>
+<a class="collapse-item" href="/api/muslim/wirid?apikey=YogGanz" target="_blank">Doa Wirid</a>
+<a class="collapse-item" href="/api/muslim/asmaulhusna?apikey=YogGanz" target="_blank">Asmaul Husna</a>
+<a class="collapse-item" href="/api/muslim/doaharian?apikey=YogGanz" target="_blank">Doa Harian</a>
+<a class="collapse-item" href="/api/muslim/ayatkursi?apikey=YogGanz" target="_blank">Ayat Kursi</a>
+<a class="collapse-item" href="/api/muslim/kisahnabi?nabi=muhammad&apikey=YogGanz" target="_blank">Kisah Nabi</a>
+<a class="collapse-item" href="/api/muslim/niatshalat?apikey=YogGanz" target="_blank">Niat Shalat</a>
+<a class="collapse-item" href="/api/muslim/bacaanshalat?apikey=YogGanz" target="_blank">Bacaan Shalat</a>
+<a class="collapse-item" href="/api/muslim/jadwalshalat?kota=jakartautara&apikey=YogGanz" target="_blank">Jadwal Shalat</a>
+  </div>
+</div>
+  </li>
+  <li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAsupan" aria-expanded="true"
+  aria-controls="collapseKodepos">
+  <i class="fa fa-coffee faa-bounce animated"></i>
+  <span>Asupan API</span>
+</a>
+<div id="collapseAsupan" class="collapse" aria-labelledby="headingKodepos" data-parent="#accordionSidebar">
+  <div class="bg-primary py-2 collapse-inner rounded">
+<h6 class="collapse-header">Asupan Video</h6>
+<a class="collapse-item" href="/api/asupan?apikey=YogGanz" target="_blank">Random Asupan</a>
+<a class="collapse-item" href="/api/asupan/santuy?apikey=YogGanz" target="_blank">Asupan Santuy &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+<a class="collapse-item" href="/api/asupan/tiktok?apikey=YogGanz" target="_blank">Asupan Tik Tok &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+<a class="collapse-item" href="/api/asupan/ukhty?apikey=YogGanz" target="_blank">Asupan Ukhty &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+<a class="collapse-item" href="/api/bokep?apikey=YogGanz" target="_blank">Asupan Bokep &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+<h6 class="collapse-header">Asupan Image</h6>
+<a class="collapse-item" href="/api/asupan/hijab?apikey=YogGanz" target="_blank">Asupan Ukhty &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+ <a class="collapse-item" href="/api/asupan/cecan?apikey=YogGanz" target="_blank">Asupan Cecan &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+ </div>
+</div>
+</li>
+   <li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseWallpaper" aria-expanded="true"
+  aria-controls="collapseKodepos">
+  <i class="fas fa-image faa-bounce animated"></i>
+  <span>Random Image API</span>
+</a>
+<div id="collapseWallpaper" class="collapse" aria-labelledby="headingKodepos" data-parent="#accordionSidebar">
+  <div class="bg-primary py-2 collapse-inner rounded">
+<h6 class="collapse-header">Random Image Fitur</h6>
+<a class="collapse-item" href="api/search/image?apikey=YogGanz&query=Yogga" target="_blank">Search Image &nbsp;<i class="fa fa-exclamation-triangle text-danger"></i><span class="text-danger mr-2"><b>Build</b></span></a>
+<a class="collapse-item" href="/api/quotesimage?apikey=YogGanz" target="_blank">Quotes Image &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+ <a class="collapse-item" href="/api/techno?apikey=YogGanz" target="_blank">Wallpaper Teknologi</a>
+<a class="collapse-item" href="/api/progam?apikey=YogGanz" target="_blank">Wallpaper Programming</a>
+<a class="collapse-item" href="/api/cyber?apikey=YogGanz" target="_blank">Wallpaper CyberSpace</a>
+<a class="collapse-item" href="/api/muslim?apikey=YogGanz" target="_blank">Wallpaper Muslim</a>
+<a class="collapse-item" href="/api/gunung?apikey=YogGanz" target="_blank">Wallpaper Mountain</a>
+ </div>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSerti" aria-expanded="true"
+  aria-controls="collapseKodepos">
+<i class="far fa-bookmark faa-bounce animated"></i>
+  <span>Serti API</span>
+</a>
+<div id="collapseSerti" class="collapse" aria-labelledby="headingKodepos" data-parent="#accordionSidebar">
+  <div class="bg-primary py-2 collapse-inner rounded">
+<a class="collapse-item" href="/api/serti/sertiepep?apikey=YogGanz&text=Yogga" target="_blank">Epep Serti&nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+ </div>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTambahan" aria-expanded="true"
+  aria-controls="collapseKodepos">
+  <i class="fas fa-fw fa-images faa-bounce animated"></i>
+  <span>Image Edit API</span>
+</a>
+<div id="collapseTambahan" class="collapse" aria-labelledby="headingKodepos" data-parent="#accordionSidebar">
+  <div class="bg-primary py-2 collapse-inner rounded">
+<h6 class="collapse-header">Image Edit</h6>
+<a class="collapse-item" href="/api/trigger?apikey=YogGanz&url=https://i.ibb.co/3TKLnx9/b125b371222d.jpg" target="_blank">Trigger &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+<a class="collapse-item" href="/api/passed?apikey=YogGanz&url=https://i.ibb.co/3TKLnx9/b125b371222d.jpg" target="_blank">Passed &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+<a class="collapse-item" href="/api/wasted?apikey=YogGanz&url=https://i.ibb.co/3TKLnx9/b125b371222d.jpg" target="_blank">Wasted &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+<a class="collapse-item" href="/api/meme?apikey=YogGanz&text=Yogga&text2=Ganz&url=https://i.ibb.co/3TKLnx9/b125b371222d.jpg" target="_blank">Meme &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+<a class="collapse-item" href="/api/fisheye?apikey=YogGanz&url=https://i.ibb.co/3TKLnx9/b125b371222d.jpg" target="_blank">Fish Eye &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+<a class="collapse-item" href="/api/scary?apikey=YogGanz&url=https://i.ibb.co/3TKLnx9/b125b371222d.jpg" target="_blank">Scary Gif &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+<a class="collapse-item" href="/api/petir?apikey=YogGanz&url=https://i.ibb.co/3TKLnx9/b125b371222d.jpg" target="_blank">Petir &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+ </div>
+</div>
+</li>
+<li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMaker" aria-expanded="true"
+  aria-controls="collapseMaker">
+  <i class="fas fa-fw fa-images faa-bounce animated"></i>
+  <span>Image Maker API</span>
+</a>
+<div id="collapseMaker" class="collapse" aria-labelledby="headingText" data-parent="#accordionSidebar">
+  <div class="bg-primary py-2 collapse-inner rounded">
+<a class="collapse-item" href="/api/maker/nulis?apikey=YogGanz&text=Yogga Ganteng" target="_blank">Nulis Buku</a>
+<a class="collapse-item" href="/api/maker/attp?apikey=YogGanz&text=Yogga" target="_blank">Attp &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+<a class="collapse-item" href="/api/maker/ttp?apikey=YogGanz&text=Yogga" target="_blank">Ttp &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+<a class="collapse-item" href="/api/maker/emoji2png?apikey=YogGanz&text=😎" target="_blank">Emoji To Png</a>
+<hr>
+<a class="collapse-item" href="/api/maker/qrcode?apikey=YogGanz&text=Yogga" target="_blank">Qrcode &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+<a class="collapse-item" href="/api/maker/barcode?apikey=YogGanz&text=Yogga" target="_blank">Barcode &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+<a class="collapse-item" href="/api/maker/transformer?apikey=YogGanz&text=Yogga Ganteng" target="_blank">Transformer &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+<a class="collapse-item" href="/api/maker/skatch?apikey=YogGanz&url=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbmrYfgiRt1lLwNgRMgMbID62qH3EQ2T1c6RUJEQMcoCWKqVVxAg7R_LfM&s=10" target="_blank">Skatch Effect</a>
+<a class="collapse-item" href="/api/maker/harta-tahta?apikey=YogGanz&text=Yogga" target="_blank">Harta Tahta Maker</a>
+</div>
+</div>
+</li>
+   <li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePhotooxy" aria-expanded="true"
+  aria-controls="collapsePhotooxy">
+  <i class="fas fa-fw fa-images faa-bounce animated"></i>
+  <span>Photooxy API</span>
+</a>
+<div id="collapsePhotooxy" class="collapse" aria-labelledby="headingText" data-parent="#accordionSidebar">
+  <div class="bg-primary py-2 collapse-inner rounded">
+<h6 class="collapse-header">Photooxy Fitur</h6>
+<a class="collapse-item" href="/api/photooxy/shadow?apikey=YogGanz&text=Yogga" target="_blank">Shadow Text</a>
+<a class="collapse-item" href="/api/photooxy/smoke?apikey=YogGanz&text=Yogga" target="_blank">Smoke Text</a>
+<a class="collapse-item" href="/api/photooxy/burn-paper?apikey=YogGanz&text=Yogga" target="_blank">Burn-paper Text</a>
+<a class="collapse-item" href="/api/photooxy/naruto?apikey=YogGanz&text=Yogga" target="_blank">Naruto Text</a>
+<a class="collapse-item" href="/api/photooxy/romantic?apikey=YogGanz&text=Yogga" target="_blank">Romantic Text</a>
+<a class="collapse-item" href="/api/photooxy/love-message?apikey=YogGanz&text=Yogga" target="_blank">Love-Message Text</a>
+<a class="collapse-item" href="/api/photooxy/message-under-grass?apikey=YogGanz&text=Yogga" target="_blank">Message-Under Grass</a>
+<a class="collapse-item" href="/api/photooxy/glitch?apikey=YogGanz&text1=Yogga&text2=Rest API" target="_blank">Glitch Text</a>
+<a class="collapse-item" href="/api/photooxy/double-heart?apikey=YogGanz&text=Yogga" target="_blank">Double Heart</a>
+<a class="collapse-item" href="/api/photooxy/coffe-cup?apikey=YogGanz&text=Yogga" target="_blank">Coffe cup</a>
+<a class="collapse-item" href="/api/photooxy/love-text?apikey=YogGanz&text=Yogga" target="_blank">Love Text</a>
+<a class="collapse-item" href="/api/photooxy/butterfly?apikey=YogGanz&text=Yogga" target="_blank">Butterfly Text</a>
+  </div>
+</div>
+  </li>
+  <li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTextpro" aria-expanded="true"
+  aria-controls="collapseTextpro">
+  <i class="fas fa-fw fa-images faa-bounce animated"></i>
+  <span>Textpro API</span>
+</a>
+<div id="collapseTextpro" class="collapse" aria-labelledby="headingAnime" data-parent="#accordionSidebar">
+  <div class="bg-primary py-2 collapse-inner rounded">
+<h6 class="collapse-header">Textpro Fitur</h6>
+<a class="collapse-item" href="/api/textpro/natural-leaves?apikey=YogGanz&text=Yogga" target="_blank">Natural Leaves Text Images</a>
+<a class="collapse-item" href="/api/textpro/black-pink?apikey=YogGanz&text=Yogga" target="_blank">Black Pink Text Image</a>
+<a class="collapse-item" href="/api/textpro/drop-water?apikey=YogGanz&text=Yogga" target="_blank">Drop Water Text Image</a>
+<a class="collapse-item" href="/api/textpro/logo-wolf?apikey=YogGanz&text=Yogga&text2=Ganz" target="_blank">Logo Wolf Text Image</a>
+<a class="collapse-item" href="/api/textpro/logo-wolf2?apikey=YogGanz&text=Yogga&text2=Ganz" target="_blank">Logo Wolf 2 Text Image</a>
+<a class="collapse-item" href="/api/textpro/logo-wolf?apikey=YogGanz&text=Yogga&text2=Ganz" target="_blank">Thunder Text Image</a>
+<a class="collapse-item" href="/api/textpro/logo-wolf?apikey=YogGanz&text=Yogga" target="_blank">Firework Sparkle Text Image</a>
+<a class="collapse-item" href="/api/textpro/logo-wolf?apikey=YogGanz&text=Yogga&text2=Ganz" target="_blank">Matrix Text Image</a>
+<a class="collapse-item" href="/api/textpro/christmas?apikey=YogGanz&text=Yogga" target="_blank">Christmas Text Image</a>
+<a class="collapse-item" href="/api/textpro/3d-gradient?apikey=YogGanz&text=Yogga" target="_blank">3D Gradient Text Image</a>
+<a class="collapse-item" href="/api/textpro/porn-hub?apikey=YogGanz&text1=Yogga&text2=Ganz" target="_blank">Porn Hub Text Image</a>
+  </div>
+</div>
+  </li>
+  <li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRandom"
+  aria-expanded="true" aria-controls="collapseRandom">
+  <i class="fas fa-random faa-bounce animated"></i>
+  <span>Random API</span>
+</a>
+<div id="collapseRandom" class="collapse" aria-labelledby="headingGithub" data-parent="#accordionSidebar">
+  <div class="bg-primary py-2 collapse-inner rounded">
+<h6 class="collapse-header">Random API</h6>
+<a class="collapse-item" href="/api/bucin?apikey=YogGanz" target="_blank">Bucin &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+<a class="collapse-item" href="/api/random/pantun?apikey=YogGanz" target="_blank">Pantun &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+<a class="collapse-item" href="/api/cerpen?apikey=YogGanz" target="_blank">Cerpen &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+<a class="collapse-item" href="/api/cersex?apikey=YogGanz" target="_blank">Cerita Sex &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+<a class="collapse-item" href="/api/random/quotes?apikey=YogGanz" target="_blank">Quotes</a>
+<a class="collapse-item" href="/api/random/quotes/muslim?apikey=YogGanz" target="_blank">Quotes Islami</a>
+<a class="collapse-item" href="/api/random/quotes/kanye?apikey=YogGanz" target="_blank">Quotes Kanye</a>
+<a class="collapse-item" href="/api/random/meme?apikey=YogGanz" target="_blank">Meme</a>
+<a class="collapse-item" href="/api/random/wallpaper?apikey=YogGanz" target="_blank">Wallpaper</a>
+  </div>
+</div>
+  </li>
+  <li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAnime" aria-expanded="true"
+  aria-controls="collapseAnime">
+  <i class="fas fa-cat faa-bounce animated"></i>
+  <span>Anime API</span>
+</a>
+<div id="collapseAnime" class="collapse" aria-labelledby="headingAnime" data-parent="#accordionSidebar">
+  <div class="bg-primary py-2 collapse-inner rounded">
+<h6 class="collapse-header">Anime Fitur</h6>
+<a class="collapse-item" href="/api/anime/kusonime?search=planetarian&apikey=YogGanz" target="_blank">Kusonime</a>
+<a class="collapse-item" href="/api/anime/manga?search=kimetsu no yaiba&apikey=YogGanz" target="_blank">Manga</a>
+<a class="collapse-item" href="/api/anime/loli?apikey=YogGanz" target="_blank">Random Loli &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+<a class="collapse-item" href="/api/neonime?apikey=YogGanz&query=Naruto" target="_blank">Neonime &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+  </div>
+</div>
+  </li>
+  <li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseGames" aria-expanded="true" aria-controls="collapseForm">
+  <i class="fas fa-laugh-beam faa-bounce animated"></i>
+   <span>Fun API</span>
+   </a>
+  <div id="collapseGames" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+   <div class="bg-primary py-2 collapse-inner rounded">
+ <h6 class="collapse-header">Fun Fitur</h6>
+ <a class="collapse-item" href="/api/artimimpi?apikey=YogGanz&query=ngewe" target="_blank">Arti Mimpi &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+ <a class="collapse-item" href="/api/artimimpi?apikey=YogGanz&query=Yogga" target="_blank">Arti Nama &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+<a class="collapse-item" href="/api/kuis/caklontong?apikey=YogGanz" target="_blank">Cak Lontong</a>
+<a class="collapse-item" href="/api/kuis/tebakgambar?apikey=YogGanz" target="_blank">Tebak Gambar</a>
+<a class="collapse-item" href="/api/tebakbendera?apikey=YogGanz" target="_blank">Tebak Bendera &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+<a class="collapse-item" href="/api/maker/dadu?apikey=YogGanz" target="_blank">Tebak Dadu</a>
+ <a class="collapse-item" href="/api/hilih?kata=aku kan ganteng banget&apikey=YogGanz" target="_blank">Kata Hilih</a>
+ </div>
+ </div>
+</li>
+   <li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseItem" aria-expanded="true" aria-controls="collapseForm">
+  <i class="fas fa-wrench faa-bounce animated"></i>
+   <span>Tools API</span>
+   </a>
+  <div id="collapseItem" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+   <div class="bg-primary py-2 collapse-inner rounded">
+ <h6 class="collapse-header">Tools Fitur</h6>
+<a class="collapse-item" href="/api/web2plain-text?apikey=YogGanz&url=https://yog-apikey.herokuapp.com" target="_blank">Web To Plain-Text</a>
+<a class="collapse-item" href="/api/tools/wpuser?apikey=YogGanz&url=http://gdjms.co.za/" target="_blank">Wordpress User &nbsp;<i class="fa fa-exclamation-triangle text-danger"></i><span class="text-danger mr-2"><b>Build</b></span></a>
+<a class="collapse-item" href="/api/short/tinyurl?url=google.com&apikey=YogGanz" target="_blank">Shortlink Tinyurl</a>
+<a class="collapse-item" href="/api/translate?kata=hi&apikey=YogGanz" target="_blank">Translate</a>
+<a class="collapse-item" href="/api/fakedata?country=en&apikey=YogGanz" target="_blank">Fake Data</a>
+ <h6 class="collapse-header">Encrypt Tools</h6>
+<a class="collapse-item" href="/api/base?apikey=YogGanz&type=base64&encode=YogGanz" target="_blank">Base64 Encrypt</a>
+<a class="collapse-item" href="/api/base?apikey=YogGanz&type=base32&encode=YogGanz" target="_blank">Base32 Encrypt</a>
+ <h6 class="collapse-header">Decrypt Tools</h6>
+<a class="collapse-item" href="/api/base?apikey=YogGanz&type=base64&decode=YogGanz" target="_blank">Base64 Decrypt</a>
+<a class="collapse-item" href="/api/base?apikey=YogGanz&type=base32&decode=YogGanz" target="_blank">Base32 Decrypt</a>
+ </div>
+ </div>
+</li>
+  <li class="nav-item">
+<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseInfo" aria-expanded="true"
+  aria-controls="collapseother">
+  <i class="fab fa-fw fa-wpforms faa-bounce animated"></i>
+  <span>Information API</span>
+</a>
+<div id="collapseInfo" class="collapse" aria-labelledby="headingother" data-parent="#accordionSidebar">
+  <div class="bg-primary py-2 collapse-inner rounded">
+<h6 class="collapse-header">Information Menu</h6>
+<a class="collapse-item" href="/api/jadwaltvnow?apikey=YogGanz" target="_blank">Jadwal Tv Now &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+<a class="collapse-item" href="/api/jadwaltv?apikey=YogGanz&query=Gtv" target="_blank">Jadwal Tv &nbsp;<i class="fa fa-asterisk text-danger"></i><span class="text-danger mr-2"><b>New</b></span></a>
+<a class="collapse-item" href="/api/info/gempa?apikey=YogGanz" target="_blank">Info Gempa</a>
+<a class="collapse-item" href="/api/info/cuaca?apikey=YogGanz&kota=banyuwangi" target="_blank">Info Cuaca &nbsp;<i class="fa fa-exclamation-triangle text-danger"></i><span class="text-danger mr-2"><b>Build</b></span></a>
+<a class="collapse-item" href="/api/info/covidindo?apikey=YogGanz" target="_blank">Covid Indo</a>
+<a class="collapse-item" href="/api/info/covidworld?apikey=YogGanz" target="_blank">Covid World</a>
+<a class="collapse-item" href="/api/info/wikipedia?search=jembatan&apikey=YogGanz" target="_blank">Wikipedia</a>
+<a class="collapse-item" href="/api/info/drakorasia?search=tale&apikey=YogGanz" target="_blank">Drakor Asia</a>
+<a class="collapse-item" href="/api/info/kbbi?kata=pohon&apikey=YogGanz" target="_blank">KBBI</a>
+<a class="collapse-item" href="/api/info/kodepos?kota=jakarta&apikey=YogGanz" target="_blank">Kode Pos</a>
+  </div>
+</div>
+  </li>
+  <hr class="sidebar-divider">
+  <div class="sidebar-heading">
+<div class="version"><b>Kontak Saya</b></div>
+  </div>
+  <li class="nav-item">
+<a class="nav-link collapsed" href="https://wa.me/62895410636348">
+<i class="fab fa-fw fa-whatsapp"></i>
+<span>WhatsApp</span>
+</a>
+  </li>
+  <li class="nav-item">
+<a class="nav-link collapsed" href="https://github.com/BSPDN">
+<i class="fab fa-fw fa-github"></i>
+<span>Github</span>
+</a>
+  </li>
+  <li class="nav-item">
+<a class="nav-link collapsed" href="https://instagram.com/bagas_prdn0560">
+<i class="fab fa-fw fa-instagram"></i>
+<span>Instagram</span>
+</a>
+</li>
+<hr class="sidebar-divider">
+<div class="version"><b>Made With ♥️ By BagasPrdn</b></div>
+</ul>
+<!-- Sidebar -->
+<div id="content-wrapper" class="d-flex flex-column">
+  <div id="content">
+<!-- TopBar -->
+<nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
+  <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+<i class="fa fa-bars text-dark"></i>
+  </button>
+  <ul class="navbar-nav ml-auto">
+<li class="nav-item dropdown no-arrow">
+  <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
+aria-haspopup="true" aria-expanded="false">
+<i class="fas fa-search fa-fw"></i>
+  </a>
+  <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+aria-labelledby="searchDropdown">
+<form class="navbar-search">
+  <div class="input-group">
+<input type="text" class="form-control bg-light border-1 small" placeholder="Mau Cari Apa?"
+  aria-label="Search" aria-describedby="basic-addon2" style="border-color: #3f51b5;">
+<div class="input-group-append">
+  <button class="btn btn-primary" type="button">
+<i class="fas fa-search fa-sm"></i>
+  </button>
+</div>
+  </div>
+</form>
+  </div>
+</li>
+<li class="nav-item dropdown no-arrow mx-1">
+  <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
+aria-haspopup="true" aria-expanded="false">
+<i class="fas fa-bell fa-fw"></i>
+<span class="badge badge-danger badge-counter">2</span>
+  </a>
+  <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+aria-labelledby="alertsDropdown">
+<h6 class="dropdown-header">
+  Notification
+</h6>
+<a class="dropdown-item d-flex align-items-center" href="#">
+  <div class="mr-3">
+<div class="icon-circle bg-primary">
+  <i class="fas fa-bell text-white"></i>
+</div>
+  </div>
+  <div>
+<div class="small text-gray-500">6 Juni 2022</div>
+<span class="font-weight-bold">Website Dibuat Owner</span>
+  </div>
+</a>
+<a class="dropdown-item d-flex align-items-center" href="#">
+  <div class="mr-3">
+<div class="icon-circle bg-warning">
+  <i class="fas fa-file-alt text-white"></i>
+</div>
+  </div>
+  <div>
+<div class="small text-gray-500">11 Juni 2022</div>
+<span class="font-weight-bold">Website Resmi Public</span>
+  </div>
+</a>
+<a class="dropdown-item text-center small text-gray-500" href="#">Lihat Semua Notifikasi</a>
+  </div>
+</li>
+<li class="nav-item dropdown no-arrow mx-1">
+  <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
+aria-haspopup="true" aria-expanded="false">
+<i class="fas fa-envelope fa-fw"></i>
+<span class="badge badge-warning badge-counter">3</span>
+  </a>
+  <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+aria-labelledby="messagesDropdown">
+<h6 class="dropdown-header">
+  Message 
+</h6>
+<a class="dropdown-item d-flex align-items-center" href="#">
+  <div class="dropdown-list-image mr-3">
+<img class="rounded-circle" src="https://h.top4top.io/p_2038yc5ag0.jpeg" style="max-width: 60px" alt="">
+<div class="status-indicator bg-success"></div>
+  </div>
+  <div class="font-weight-bold">
+<div class="text-truncate">Sayang udah makan belom, aku suapin nih?
+ </div>
+<div class="small text-gray-500">SayangQuu · baru saja</div>
+  </div>
+</a>
+<a class="dropdown-item d-flex align-items-center" href="#">
+  <div class="dropdown-list-image mr-3">
+<img class="rounded-circle" src="https://telegra.ph/file/89a3666371e61408c595a.jpg" style="max-width: 60px" alt="">
+<div class="status-indicator bg-default"></div>
+  </div>
+<div class="font-weight-bold">
+<div class="text-truncate">Yang Kangen :(
+</div>
+<div class="small text-gray-500">Lidiya Istikomah · 1 menit yang lalu</div>
+  </div>
+</a>
+<a class="dropdown-item d-flex align-items-center" href="#">
+<div class="dropdown-list-image mr-3">
+<img class="rounded-circle" src="https://telegra.ph/file/ad31670bcdc9ad27ae5c1.jpg" style="max-width: 60px" alt="">
+<div class="status-indicator bg-default"></div>
+ </div>
+<div class="font-weight-bold">
+<div class="text-truncate">Bagas!!! Balikan Yuk
+</div>
+<div class="small text-gray-500">Mantan 😈 · 5 menit yang lalu</div>
+</div>
+</a>
+<a class="dropdown-item text-center small text-gray-500" href="#">Baca Pesan Selanjutnya</a>
+  </div>
+</li>
+<li class="nav-item dropdown no-arrow mx-1">
+  <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
+aria-haspopup="true" aria-expanded="false">
+<i class="fas fa-tasks fa-fw"></i>
+<span class="badge badge-success badge-counter">3</span>
+  </a>
+  <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+aria-labelledby="messagesDropdown">
+<h6 class="dropdown-header">
+  Programming Skill
+</h6>
+<a class="dropdown-item align-items-center" href="#">
+  <div class="mb-3">
+<div class="small text-gray-500">Added Fitur
+  <div class="small float-right"><b>90%</b></div>
+</div>
+<div class="progress" style="height: 12px;">
+  <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="90"
+aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+  </div>
+</a>
+<a class="dropdown-item align-items-center" href="#">
+  <div class="mb-3">
+<div class="small text-gray-500">JavaScript
+  <div class="small float-right"><b>40%</b></div>
+</div>
+<div class="progress" style="height: 12px;">
+  <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40"
+aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+  </div>
+</a>
+  </div>
+</li>
+<div class="topbar-divider d-none d-sm-block"></div>
+<li class="nav-item dropdown no-arrow">
+  <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+aria-haspopup="true" aria-expanded="false">
+<img class="img-profile rounded-circle" src="https://telegra.ph/file/1a0ce5481bd1ea067acb5.jpg" style="max-width: 60px">
+<span class="ml-2 d-none d-lg-inline text-white small">BagasPrdn</span>
+  </a>
+  <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="https://wa.me/62895410636348">
+                  <i class="fab fa-fw fa-whatsapp"></i>
+                  Whatsapp
+                </a>
+                <a class="dropdown-item" href="https://t.me/BagasPrdn">
+                  <i class="fab fa-fw fa-telegram"></i>
+                  Telegram
+                </a>
+                <a class="dropdown-item" href="https://www.instagram.com/bagas_prdn0560">
+                  <i class="fab fa-fw fa-instagram"></i>
+                  Instagram
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="https://bagas-api.herokuapp.com">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+<!-- Topbar -->
+<!-- Container Fluid-->
+<div class="container-fluid" id="container-wrapper">
+  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+ <div class="page-content">
+<div class="row">
+<div class="d-flex justify-content-between">
+<marquee  bgcolor="#16182D" style="margin-right: 6px; margin-left: 10px; margin-top: 10px;margin-bottom: 12px; border-radius: 5px;letter-spacing: 3px; font-family:arial; font-size:20px; color:#ffffff; padding-top: 4px;padding-bottom: 4px;"> Terima Kasih Sudah Mengunjungi Website Bagas Rest Api </marquee>
+</div>
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/"><i class="fa fa-home faa-tada animated"> </i>&nbsp;Home</a></li>
+  <li class="breadcrumb-item active" aria-current="page">Beranda</li>
+</ol>
+  </div>
+<footer class="sticky-footer bg-dark">
+  <div class="col-lg-6">
+   <div class="card mb-4">
+<div class="card-header py-3">
+ <div class="card-body">
+   <div class="row align-item-center">
+  <img class="shadow mb-4" width="330px" height="300px" src="https://tinyurl.com/fhszp24">
+   </div>
+  </div>
+</div>
+  </div> 
+</div>
+  <div class="col-lg-6">
+   <div class="card mb-4">
+<div class="card-header py-3">
+ <div class="card-body">
+  <div class="row align-item-center">
+   <div id="demo" class="alert alert-info alert-dismissible" role="alert">
+<div id="Statistic"></div>
+ <span id="tgl">00</span> - <span id="bln">00</span> - <span id="thn"></span>
+</div>
+   </div>
+  </div>
+ </div> 
+</div>
+   </div>
+<div class="col-xl-3 col-md-6 mb-4">
+  <div class="card h-100">
+<div class="card-body">
+  <div class="row align-items-center">
+<div class="col mr-2">
+  <div class="text-xs font-weight-bold text-uppercase mb-1">Pengunjung Rest Api</div>
+  <div class="h5 mb-0 font-weight-bold text-gray-800" id="visits">00</div>
+</div>
+<div class="col-auto">
+  <i class="fas fa-eye fa-2x text-primary"></i>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="col-xl-3 col-md-6 mb-4">
+  <div class="card h-100">
+  <div class="card-body">
+  <div class="row align-items-center">
+  <div class="col mr-2">
+  <div class="text-xs font-weight-bold text-uppercase mb-1">Waktu</div>
+ <div class="h5 mb-0 font-weight-bold text-gray-800" id='jam' ></div>
+  <div class="mt-2 mb-0 text-muted text-xs">
+  </div>
+  </div>
+  <div class="col-auto">
+  <b><i class="fas fa-clock fa-2x text-primary"></i>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+<!---Container Fluid-->
+  <!-- Footer -->
+ <form action="/api/cekapikey">
+<div class="col-xl-3 col-md-6 mb-4">
+  <div class="card h-100">
+<div class="card-body">
+  <div class="row align-items-center">
+<div class="col mr-2">
+   <div class="h6 mb-0 font-weight-bold text-dark-800 text-uppercase">
+  <h6 class="text-center">[+] cek apikey [+]</h6>
+  </div>
+   <input type="password" class="form-control" placeholder="NIH APIKEY NYA MASIH GRATIS : BagasPrdn" name="apikey" required=""><br>
+<button class="btn btn-danger btn-icon-split">
+ <span class="icon text-white-50">
+  <i class="fas fa-check"></i>
+ </span>
+ <span class="text">Check</span>
+</button>
+ </div>
+</div>
+   </div>
+  </div>
+ </div>
+  </form>
+  <div class="col-xl-3 col-md-6 mb-4">
+<div class="card h-100">
+<div class="card-body">
+<div class="row no-gutters align-items-center">
+<div class="col mr-2">
+<center>
+<marquee>Dandelions - BagasPrdn</marquee>
+<audio src="https://l.top4top.io/m_2047c8tka0.mp3" controls loop></audio>
+</center>
+</div>
+</div>
+<div class="col-auto">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-md-6 mb-4">
+<div class="card h-100">
+<div class="card-body">
+<hr>
+<center>
+<div class="h5 mb-0 font-weight-bold text-gray-800">TIC TAC TOE</div>
+<i class="fa fa-gamepad fa-2x text-primary"></i>
+</center>
+<div class="mt-2 mb-0 text-muted text-xs">
+<div class="container1">
+<div class="play-area">
+</div>
+<h21 class="text-center" id="winner"></h21>
+<button1 onclick="reset_board()">ULANG</button1>
+</div>
+</div>
+</div>
+</div>
+  <div class="col-lg-6">
+   <div class="card mb-4">
+<div class="card-header py-3">
+ <div class="card-body">
+ <div class="card m-3 text-center shadow">
+   <p class="card-header shadow-sm bg-primary text-white text-uppercase">Tentang Owner</p>
+  <div class="text-center">
+<img src="https://telegra.ph/file/1a0ce5481bd1ea067acb5.jpg" class="rounded-circle shadow mb-3" alt="BagasPrdn" width="150px" height="150px">
+  </div>
+  <div class="copyright text-center my-auto">
+ <p class="card-text text-shadow">BagasPrdn<br></p><div class="text-xs font-weight-bold text-uppercase">
+   <h6 class="text-uppercase">Thanks To :</h6>
+   Semua Yang Terlibat<br>Di Rest Api Ini
+ </div>
+ </div>
+  </div>
+</div>
+  </div>
+</div>
+</div>
+   <style>
+  .bg-orange {
+  background-color: #c3cf0f;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #ffa426), to(#dda20a));
+  background-image: linear-gradient(180deg, #dd7009 10%, #ee7708 100%);
+  background-size: cover
+}
+
+.border-right-warning {
+  border-right: .25rem solid #ffeb3b !important
+}
+
+.border-top-warning {
+  border-top: .25rem solid #ffeb3b !important
+}
+
+.animated {
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: #FF0000;
+-webkit-animation: animatedBackground_c 2s infinite alternate;
+}
+@keyframes animatedBackground_c {
+0% {-webkit-text-stroke-color: #ff8b00}
+10% {-webkit-text-stroke-color: #e8ff00}
+20% {-webkit-text-stroke-color: #5dff00}
+30% {-webkit-text-stroke-color: #00ff2e}
+40% {-webkit-text-stroke-color: #00ffb9}
+50% {-webkit-text-stroke-color: #00b9ff}
+60% {-webkit-text-stroke-color: #002eff}
+70% {-webkit-text-stroke-color: #5d00ff}
+80% {-webkit-text-stroke-color: #e800ff}
+90% {-webkit-text-stroke-color: #ff008b}
+100% {-webkit-text-stroke-color: #ff0000}
+}
+
+.img-gg {
+  width: 165px;
+  height: 165px; 
+ border: 3px solid #e3eaef}
+  
+  h7, .h7 {
+  font-size: 0.7rem; }
+  
+  .font-gg {
+  	font-size: 40px
+  }
+
+.rainbow {
+  background: linear-gradient(
+to right, 
+#A6CE37, #ECE71C, #0FC6E6, #F95D44, #816271, #9F1958, #081B6A, #59D7EE);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 800px;
+  background-position: center 0%;
+  animation: background-slide 25s infinite linear;
+}
+
+@keyframes background-slide {
+  100% {
+background-position: 8160px;
+  }
+}
+
+.bg-gray-dark {
+background: #e3eaef; }
+ 
+.container1 {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+h11 {
+  font-size: 5rem;
+  margin-bottom: 0.5em;
+}
+
+h21 {
+  margin-top: 1em;
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+
+.play-area {
+background-color: #e3eaef;
+  display: grid;
+  width: 300px;
+  height: 300px;
+  grid-template-columns: auto auto auto;
+}
+
+.block {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  border: 3px solid black;
+  transition: background 0.2s ease-in-out;
+}
+
+.block:hover {
+  cursor: pointer;
+  background: #0ff30f;
+}
+
+.occupied:hover {
+  background: #ff3a3a;
+}
+
+.win {
+  background: #0ff30f;
+}
+
+.win:hover {
+  background: #0ff30f;
+}
+
+#block_0,
+#block_1,
+#block_2 {
+  border-top: none;
+}
+
+#block_0,
+#block_3,
+#block_6 {
+  border-left: none;
+}
+
+#block_6,
+#block_7,
+#block_8 {
+  border-bottom: none;
+}
+
+#block_2,
+#block_5,
+#block_8 {
+  border-right: none;
+}
+
+button1 {
+  outline: none;
+  border: 4px solid green;
+  padding: 8px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: none;
+  transition: all 0.2s ease-in-out;
+}
+
+button1:hover {
+  cursor: pointer;
+  background: green;
+  color: white;
+}
+
+.playerWin {
+  color: blue;
+}
+
+.computerWin {
+  color: red;
+}
+
+.draw {
+  color: orangered;
+}
+
+@media only screen and (max-width: 600px) {
+
+  h11 {
+font-size: 3rem;
+margin-bottom: 0.5em;
+  }
+
+  h21 {
+margin-top: 1em;
+font-size: 1.3rem;
+  }
+}
+
+</style>
+  <div class="card-body">
+<p><b>
+<p>
+</b>
+</p>
+</div>
+</div>
+</div>
+
+
+<script>
+const player = "⭕";
+const computer = "❌";
+
+let board_full = false;
+let play_board = ["", "", "", "", "", "", "", "", ""];
+
+const board_container = document.querySelector(".play-area");
+
+const winner_statement = document.getElementById("winner");
+
+check_board_complete = () => {
+  let flag = true;
+  play_board.forEach(element => {
+if (element != player && element != computer) {
+  flag = false;
+}
+  });
+  board_full = flag;
+};
+
+
+const check_line = (a, b, c) => {
+  return (
+play_board[a] == play_board[b] &&
+play_board[b] == play_board[c] &&
+(play_board[a] == player || play_board[a] == computer)
+  );
+};
+
+const check_match = () => {
+  for (i = 0; i < 9; i += 3) {
+if (check_line(i, i + 1, i + 2)) {
+  document.querySelector(`#block_${i}`).classList.add("win");
+  document.querySelector(`#block_${i + 1}`).classList.add("win");
+  document.querySelector(`#block_${i + 2}`).classList.add("win");
+  return play_board[i];
+}
+  }
+  for (i = 0; i < 3; i++) {
+if (check_line(i, i + 3, i + 6)) {
+  document.querySelector(`#block_${i}`).classList.add("win");
+  document.querySelector(`#block_${i + 3}`).classList.add("win");
+  document.querySelector(`#block_${i + 6}`).classList.add("win");
+  return play_board[i];
+}
+  }
+  if (check_line(0, 4, 8)) {
+document.querySelector("#block_0").classList.add("win");
+document.querySelector("#block_4").classList.add("win");
+document.querySelector("#block_8").classList.add("win");
+return play_board[0];
+  }
+  if (check_line(2, 4, 6)) {
+document.querySelector("#block_2").classList.add("win");
+document.querySelector("#block_4").classList.add("win");
+document.querySelector("#block_6").classList.add("win");
+return play_board[2];
+  }
+  return "";
+};
+
+const check_for_winner = () => {
+  let res = check_match()
+  if (res == player) {
+winner.innerText = "KAMU MENANG";
+winner.classList.add("playerWin");
+board_full = true
+  } else if (res == computer) {
+winner.innerText = "KAMU KALAH";
+winner.classList.add("computerWin");
+board_full = true
+  } else if (board_full) {
+winner.innerText = "IMBANG";
+winner.classList.add("draw");
+  }
+};
+
+
+const render_board = () => {
+  board_container.innerHTML = ""
+  play_board.forEach((e, i) => {
+board_container.innerHTML += `<div id="block_${i}" class="block" onclick="addPlayerMove(${i})">${play_board[i]}</div>`
+if (e == player || e == computer) {
+  document.querySelector(`#block_${i}`).classList.add("occupied");
+}
+  });
+};
+
+const game_loop = () => {
+  render_board();
+  check_board_complete();
+  check_for_winner();
+}
+
+const addPlayerMove = e => {
+  if (!board_full && play_board[e] == "") {
+play_board[e] = player;
+game_loop();
+addComputerMove();
+  }
+};
+
+const addComputerMove = () => {
+  if (!board_full) {
+do {
+  selected = Math.floor(Math.random() * 9);
+} while (play_board[selected] != "");
+play_board[selected] = computer;
+game_loop();
+  }
+};
+
+const reset_board = () => {
+  play_board = ["", "", "", "", "", "", "", "", ""];
+  board_full = false;
+  winner.classList.remove("playerWin");
+  winner.classList.remove("computerWin");
+  winner.classList.remove("draw");
+  winner.innerText = "";
+  render_board();
+};
+
+//initial render
+render_board();
+</script>
+
+  <div class="container my-auto">
+  <div class="copyright text-center my-auto">
+<span>Copyright &copy; 2022 - Developer By
+  <b>BagasPrdn</b>
+</span>
+  </div>
+</div>
+  </div>
+  </footer>
+  <!-- Footer -->
+</div>
+  </div>
+<audio autoplay="true" src="https://g.top4top.io/m_204232b0i0.mp3"></audio>
+  <!-- Scroll to top -->
+  <a class="scroll-to-top rounded" href="#page-top">
+<i class="fas fa-angle-up"></i>
+  </a>
+  <script async src="https://api.countapi.xyz/hit/yog-apikey.herokuapp.com/visits?callback=cb"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="js/ruang-admin.js"></script>
+  <script src="vendor/chart.js/Chart.min.js"></script>
+  <script src="js/demo/chart-area-demo.js"></script>  
+</body>
+<script type="text/javascript">
+// 1 detik = 1000
+window.setTimeout("waktu()",1000);  
+function waktu() {   
+var tanggal = new Date();  
+setTimeout("waktu()",1000);  
+document.getElementById("jam").innerHTML = tanggal.getHours()+":"+tanggal.getMinutes()+":"+tanggal.getSeconds();
+}
+</script>
+<!-- MARINGNGERRANG GUESTBOOK START -->
+<script>
+window['CboxReady'] = function (Cbox) {
+Cbox('button', '5-927387-r0nb56');
+}
+</script>
+<script src="https://static.cbox.ws/embed/1.js" async></script>
+ <!-- MARINGNGERRANG GUESTBOOK END -->
+</html>
